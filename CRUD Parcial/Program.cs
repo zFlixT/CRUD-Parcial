@@ -17,6 +17,7 @@ namespace CRUD_Parcial
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
         }
     }
 }

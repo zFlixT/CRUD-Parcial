@@ -39,5 +39,40 @@ namespace CRUD_Parcial
             this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Llamamos al customerBindingSource y el metodo que queremos ejecutar
+            customersBindingSource.AddNew();
+        }
+
+        private void KeyPressEventArgs(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void CajaTextoID_KeyPress(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CajaTextoID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (e.KeyChar == (char)13)
+                {
+                    var index = customersBindingSource.Find("CustomerID", CajaTextoID);
+                    if (index > -1)
+                    {
+                        customersBindingSource.Position = index;
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Elemento no encontrado");
+                    }
+                };
+            }
+        }
     }
 }

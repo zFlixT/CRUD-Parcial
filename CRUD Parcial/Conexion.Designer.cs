@@ -210,6 +210,7 @@
             // customersBindingNavigator
             // 
             this.customersBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.customersBindingNavigator.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.customersBindingNavigator.BindingSource = this.customersBindingSource;
             this.customersBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.customersBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -234,7 +235,7 @@
             this.customersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.customersBindingNavigator.Name = "customersBindingNavigator";
             this.customersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.customersBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.customersBindingNavigator.Size = new System.Drawing.Size(736, 25);
             this.customersBindingNavigator.TabIndex = 0;
             this.customersBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -290,7 +291,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -335,7 +335,6 @@
             // 
             // CajaTextoID
             // 
-            this.CajaTextoID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.CajaTextoID.Name = "CajaTextoID";
             this.CajaTextoID.Size = new System.Drawing.Size(100, 25);
             this.CajaTextoID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CajaTextoID_KeyPress);
@@ -443,7 +442,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 485);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(736, 460);
             this.Controls.Add(this.button1);
             this.Controls.Add(customerIDLabel);
             this.Controls.Add(this.customerIDTextBox);

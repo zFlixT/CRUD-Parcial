@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace CRUD_Parcial
 {
+    //Se define una clase estática interna llamada Program.
     internal static class Program
     {
         /// <summary>
@@ -16,7 +17,9 @@ namespace CRUD_Parcial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Conexion());
+            //Ejecuta la aplicación y muestra el formulario de inicio.
+            //'Inicio' es el formulario principal que se abre cuando se inicia la aplicación.
+            Application.Run(new Inicio());
 
         }
     }

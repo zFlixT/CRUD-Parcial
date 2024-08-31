@@ -1,6 +1,6 @@
 ﻿namespace CRUD_Parcial
 {
-    partial class Form1
+    partial class Listado
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listado));
             this.northwindDataSet = new CRUD_Parcial.NorthwindDataSet();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter = new CRUD_Parcial.NorthwindDataSetTableAdapters.CustomersTableAdapter();
             this.tableAdapterManager = new CRUD_Parcial.NorthwindDataSetTableAdapters.TableAdapterManager();
-            this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.cbBuscarID = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -46,7 +46,10 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.customersDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,8 +64,8 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
-            this.customersBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbBuscarID)).BeginInit();
+            this.cbBuscarID.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,14 +89,14 @@
             this.tableAdapterManager.CustomersTableAdapter = this.customersTableAdapter;
             this.tableAdapterManager.UpdateOrder = CRUD_Parcial.NorthwindDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // customersBindingNavigator
+            // cbBuscarID
             // 
-            this.customersBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.customersBindingNavigator.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.customersBindingNavigator.BindingSource = this.customersBindingSource;
-            this.customersBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.customersBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.customersBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cbBuscarID.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.cbBuscarID.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.cbBuscarID.BindingSource = this.customersBindingSource;
+            this.cbBuscarID.CountItem = this.bindingNavigatorCountItem;
+            this.cbBuscarID.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.cbBuscarID.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -104,18 +107,21 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
+            this.toolStripSeparator1,
             this.bindingNavigatorDeleteItem,
-            this.customersBindingNavigatorSaveItem});
-            this.customersBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.customersBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.customersBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.customersBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.customersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.customersBindingNavigator.Name = "customersBindingNavigator";
-            this.customersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.customersBindingNavigator.Size = new System.Drawing.Size(800, 25);
-            this.customersBindingNavigator.TabIndex = 0;
-            this.customersBindingNavigator.Text = "bindingNavigator1";
+            this.toolStripSeparator2,
+            this.customersBindingNavigatorSaveItem,
+            this.toolStripSeparator3});
+            this.cbBuscarID.Location = new System.Drawing.Point(0, 0);
+            this.cbBuscarID.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.cbBuscarID.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.cbBuscarID.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.cbBuscarID.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.cbBuscarID.Name = "cbBuscarID";
+            this.cbBuscarID.PositionItem = this.bindingNavigatorPositionItem;
+            this.cbBuscarID.Size = new System.Drawing.Size(1142, 25);
+            this.cbBuscarID.TabIndex = 0;
+            this.cbBuscarID.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -203,6 +209,16 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // customersBindingNavigatorSaveItem
             // 
             this.customersBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -211,6 +227,11 @@
             this.customersBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.customersBindingNavigatorSaveItem.Text = "Guardar datos";
             this.customersBindingNavigatorSaveItem.Click += new System.EventHandler(this.customersBindingNavigatorSaveItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // customersDataGridView
             // 
@@ -233,7 +254,7 @@
             this.customersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersDataGridView.Location = new System.Drawing.Point(0, 25);
             this.customersDataGridView.Name = "customersDataGridView";
-            this.customersDataGridView.Size = new System.Drawing.Size(800, 425);
+            this.customersDataGridView.Size = new System.Drawing.Size(1142, 425);
             this.customersDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -302,22 +323,22 @@
             this.dataGridViewTextBoxColumn11.HeaderText = "Fax";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
-            // Form1
+            // Listado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1142, 450);
             this.Controls.Add(this.customersDataGridView);
-            this.Controls.Add(this.customersBindingNavigator);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.cbBuscarID);
+            this.Name = "Listado";
+            this.Text = "Listado";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).EndInit();
-            this.customersBindingNavigator.ResumeLayout(false);
-            this.customersBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbBuscarID)).EndInit();
+            this.cbBuscarID.ResumeLayout(false);
+            this.cbBuscarID.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -330,7 +351,7 @@
         private System.Windows.Forms.BindingSource customersBindingSource;
         private NorthwindDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
         private NorthwindDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator customersBindingNavigator;
+        private System.Windows.Forms.BindingNavigator cbBuscarID;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -355,6 +376,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 
